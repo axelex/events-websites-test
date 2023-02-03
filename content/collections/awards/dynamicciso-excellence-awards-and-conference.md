@@ -10,7 +10,7 @@ date_of_event: 'March 10'
 event_year: '2023'
 hero_video: awards/videos/promo-video-new-cut-34-sec-compressed.mp4
 hero_title_first_line: 'Building Cyber -'
-hero_title_second_line: 'Resilient Enterprises :'
+hero_title_second_line: 'Resilient Enterprises Changed :'
 animation_text_1: Respond
 animation_text_2: Awards
 animation_text_3: Events
