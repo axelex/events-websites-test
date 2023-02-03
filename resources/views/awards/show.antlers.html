@@ -1,0 +1,1800 @@
+<div class="awards_page">
+    <!-- Nav partial  -->
+    {{ partial:awards/nav }}
+
+    <!-- content section start -->
+    <section class="content_wrapper mt-4 md:mt-14">
+        <div class="container">
+            <div class="hero_text mb-6 md:mb-12">
+                <div
+                    class="text-black text-xl sm:text-3xl xl:text-6xl leading-[3rem] caption"
+                >
+                    {{hero_title_first_line}}
+                </div>
+                <div
+                    class="text-black text-xl sm:text-3xl xl:text-6xl leading-[3rem] caption mt-[-1.0rem] sm:mt-4 lg:mt-6"
+                >
+                    <span class="!mt-2"> {{hero_title_second_line}}</span>
+                    <div
+                        class="text-box leading-normal top-[10px] md:top-0 -z-50"
+                    >
+                        <div class="text-[#F5A800] -z-0">
+                            {{animation_text_1}}
+                        </div>
+                        <div class="text-[#F5A800] -z-0">
+                            {{animation_text_2}}
+                        </div>
+                        <div class="text-[#F5A800] -z-0">
+                            {{animation_text_3}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 gap-16 place-items-start"
+            >
+                <div class="content">
+                    <p class="leading-loose text-justify text-[#383838]">
+                        {{overview_text_paragraph_1}}
+                    </p>
+                    <p class="leading-loose text-justify text-[#383838] mt-8">
+                        {{overview_text_paragraph_2}}
+                    </p>
+                    <p class="leading-loose text-justify text-[#383838] mt-8">
+                        {{overview_text_paragraph_3}}
+                    </p>
+                </div>
+                <div class="call_to_action w-full md:w-[90%]">
+                    {{cta_panel}}
+                    <div
+                        class="cta_box flex flex-nowrap gap-10 justify-start items-center border border-black p-3 mb-5"
+                    >
+                        {{cta_image}}
+                        <div class="icon_box">
+                            <img src="{{url}}" alt="{{alt}}" />
+                        </div>
+                        {{/cta_image}}
+                        <div class="text_box">
+                            <a
+                                href="{{cta_link}}"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <h3
+                                    class="text-2xl font-semibold inline-block hover:underline"
+                                >
+                                    {{cta_text}}
+                                </h3>
+                            </a>
+                            <!-- <span class="ml-1">for Summit </span> -->
+                        </div>
+                    </div>
+                    {{/cta_panel}}
+
+                    <!-- <div
+                        class="cta_box flex flex-nowrap gap-10 justify-start items-center border border-black p-3 mb-5"
+                    >
+                        <div class="icon_box">
+                            <img
+                                src="/assets/awards/images/nominate.png"
+                                alt=""
+                            />
+                        </div>
+                        <div class="text_box">
+                            <h3 class="text-3xl font-semibold inline-block">
+                                Nominate
+                            </h3>
+                            <span class="ml-1">for Awards </span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="cta_box flex flex-nowrap gap-10 justify-start items-center border border-black p-3"
+                    >
+                        <div class="icon_box">
+                            <img
+                                src="/assets/awards/images/sponsor.png"
+                                alt=""
+                            />
+                        </div>
+                        <div class="text_box">
+                            <h3 class="text-3xl font-semibold inline-block">
+                                Sponsor
+                            </h3>
+                            <span class="ml-1">for Events </span>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- content section end -->
+
+    <!-- about_event image start  -->
+    <section class="about_event mt-20">
+        <div class="container">
+            <!-- about event content  start-->
+            {{panels}}
+            <div
+                class="about_event_wrapper grid grid-cols-1 lg:grid-cols-2 gap-x-28 mb-28"
+            >
+                <!-- Left content  start-->
+                <div class="left_content {{index % 2 ?= 'order-last' }}">
+                    <p
+                        class="uppercase text-[#AFAFAF] font-semibold text-sm mb-4"
+                    >
+                        {{panel_teaser}}
+                    </p>
+                    <h3 class="uppercase text-5xl font-semibold">
+                        {{panel_title}}
+                    </h3>
+                    <div
+                        class="divider w-[200px] h-1 bg-gray-400 relative mt-5"
+                    >
+                        <div
+                            class="w-[60px] h-1 bg-gray-800 absolute top-0"
+                        ></div>
+                    </div>
+
+                    <p class="leading-loose text-justify text-[#383838] mt-8">
+                        {{panel_text_paragraph_1}}
+                    </p>
+
+                    <p class="leading-loose text-justify text-[#383838] mt-5">
+                        {{panel_text_paragraph_2}}
+                    </p>
+
+                    <ul
+                        class="list-disc leading-loose text-justify text-[#383838] mt-5"
+                    >
+                        {{listable_content}}
+                        <li>{{list_item}}</li>
+                        {{/listable_content}}
+                    </ul>
+
+                    <p class="leading-loose text-justify text-[#383838] mt-5">
+                        {{panel_text_paragraph_3}}
+                    </p>
+                    {{if count ==1}}
+                    <div class="details_box mt-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div class="col">
+                                <span>
+                                    <img
+                                        src="/assets/awards/images/icon_location.png"
+                                        alt=""
+                                    />
+                                </span>
+                                <p class="p-3 pl-0 font-semibold">Where</p>
+                                <p class="text-[#888888]">{{event_location}}</p>
+                            </div>
+                            <div class="col">
+                                <span>
+                                    <img
+                                        src="/assets/awards/images/icon_time.png"
+                                        alt=""
+                                    />
+                                </span>
+                                <p class="p-3 pl-0 font-semibold">When</p>
+                                <p class="text-[#888888]">{{event_when}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {{/if}}
+                </div>
+                <!-- Left content  end -->
+                <!-- right image start  -->
+                <div class="right_content mb-5 md:mb-0 mt-5 md:mt-0">
+                    {{panel_image}}
+                    <img src="{{url}}" class="w-full mt-3" alt="{{alt}}" />
+                    {{/panel_image}}
+                </div>
+                <!-- right image end  -->
+            </div>
+            {{/panels}}
+            <!-- 
+              <div
+                class="about_event_wrapper grid grid-cols-1 lg:grid-cols-2 gap-x-6"
+            >
+               
+                {{# <div class="left_content">
+                    <p
+                        class="uppercase text-[#AFAFAF] font-semibold text-sm mb-4"
+                    >
+                        About the Event
+                    </p>
+                    <h3 class="uppercase text-5xl font-semibold">
+                        EXPERIENCE A TRUE <br />
+                        DIGITAL
+                    </h3>
+
+                    <div
+                        class="divider w-[200px] h-1 bg-gray-400 relative mt-5"
+                    >
+                        <div
+                            class="w-[60px] h-1 bg-gray-800 absolute top-0"
+                        ></div>
+                    </div>
+
+                    <p class="leading-loose text-justify text-[#383838] mt-8">
+                        The DynamicCISO Excellence Awards and Conference, 9th
+                        Edition, will provide actionable insight, takeaways and
+                        recognition to top cybersecurity professionals. The
+                        themes discussed will include the challenges around the
+                        emerging threat landscape, the evolving regulatory
+                        guidance, improving ROI from cybersecurity investments,
+                        sustainable innovation and the future of cybersecurity.
+                    </p>
+
+                    <p class="leading-loose text-justify text-[#383838] mt-5">
+                        The conference is designed to empower practitioners
+                        toward becoming business enablers for their
+                        organizations and will be followed by a gala awards
+                        function to honor excellence in cybersecurity.
+                    </p>
+
+                    <div class="details_box mt-8">
+                        <div class="grid grid-cols-2">
+                            <div class="col">
+                                <span>
+                                    <img
+                                        src="/assets/awards/images/icon_location.png"
+                                        alt=""
+                                    />
+                                </span>
+                                <p class="p-3 pl-0 font-semibold">where</p>
+                                <p class="text-[#888888]">
+                                    Fort Mason Center,
+                                    <br />
+                                    Mumbai, India
+                                </p>
+                            </div>
+                            <div class="col">
+                                <span>
+                                    <img
+                                        src="/assets/awards/images/icon_time.png"
+                                        alt=""
+                                    />
+                                </span>
+                                <p class="p-3 pl-0 font-semibold">where</p>
+                                <p class="text-[#888888]">
+                                    Sunday to Wednesday
+                                    <br />
+                                    March 09 to 10, 2023
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div
+                    class="right_content ml-0 md:ml-20 mb-5 md:mb-0 mt-5 md:mt-0"
+                >
+                    <img
+                        src="/assets/awards/images/image_right_1.png"
+                        class="w-full mt-3"
+                        alt=""
+                    />
+                </div>
+            </div> #}}
+              -->
+            {{#
+            <!-- partcipate event content  start-->
+            <div
+                class="participate_event_wrapper grid grid-cols-1 lg:grid-cols-2 gap-x-6 mt-20"
+            >
+                <!-- left image start  -->
+                <div class="left_content mb-16 md:mb-0 mt-5 md:mt-0">
+                    <img
+                        src="/assets/awards/images/participate.png"
+                        class="w-full mt-3"
+                        alt=""
+                    />
+                </div>
+                <!-- left image end  -->
+
+                <!-- right content  start-->
+                <div class="right_content ml-0 md:ml-20">
+                    <p
+                        class="uppercase text-[#AFAFAF] font-semibold text-sm mb-4"
+                    >
+                        WHY PARTICIPATE?
+                    </p>
+                    <h3 class="uppercase text-5xl font-semibold">
+                        WHY PARTICIPATE?
+                    </h3>
+
+                    <div
+                        class="divider w-[200px] h-1 bg-gray-400 relative mt-5"
+                    >
+                        <div
+                            class="w-[60px] h-1 bg-gray-800 absolute top-0"
+                        ></div>
+                    </div>
+
+                    <p class="leading-loose text-justify text-[#383838] mt-8">
+                        Some key themes for the conference include:
+                    </p>
+                    <ul
+                        class="list-disc leading-loose text-justify text-[#383838] mt-5"
+                    >
+                        <li>Data protection and privacy</li>
+                        <li>IT and IoT</li>
+                        <li>Compliance and risk management</li>
+                        <li>5G security</li>
+                        <li>DevSecOps</li>
+                        <li>Identity and access management</li>
+                        <li>Cryptocurrency</li>
+                    </ul>
+
+                    <p class="leading-loose text-justify text-[#383838] mt-5">
+                        ISMG's events provide education and exclusive networking
+                        opportunities with peers and subject matter experts. CPE
+                        credits are also available to all the summit attendees.
+                    </p>
+                </div>
+                <!-- right content  end -->
+            </div>
+            <!-- partcipate  event content  end-->
+
+            <!-- experiance a true section start -->
+            <div
+                class="about_event_wrapper grid grid-cols-1 lg:grid-cols-2 gap-x-6 mt-20"
+            >
+                <!-- Left content  start-->
+                <div class="left_content">
+                    <p
+                        class="uppercase text-[#AFAFAF] font-semibold text-sm mb-4"
+                    >
+                        About the Event
+                    </p>
+                    <h3 class="uppercase text-5xl font-semibold">
+                        EXPERIENCE A TRUE <br />
+                        DIGITAL
+                    </h3>
+
+                    <div
+                        class="divider w-[200px] h-1 bg-gray-400 relative mt-5"
+                    >
+                        <div
+                            class="w-[60px] h-1 bg-gray-800 absolute top-0"
+                        ></div>
+                    </div>
+
+                    <p class="leading-loose text-justify text-[#383838] mt-8">
+                        This conference is designed for:
+                    </p>
+
+                    <ul
+                        class="leading-loose text-justify text-[#383838] mt-5 list-disc"
+                    >
+                        <li>Chief Information Security Officers</li>
+                        <li>
+                            Chief Information Officers/ Chief Technology
+                            officers
+                        </li>
+                        <li>
+                            VP/ Director/ Heads- Cloud, Application and
+                            Information Security
+                        </li>
+                        <li>Governance, Risk, and Compliance (GRC) Heads</li>
+                        <li>SOC (Security Operation Center) Heads</li>
+                        <li>Identity and access management leaders</li>
+                        <li>Data Protection Officers (DPO)</li>
+                    </ul>
+                </div>
+                <!-- Left content  end -->
+                <!-- right image start  -->
+                <div
+                    class="right_content ml-0 md:ml-20 mb-5 md:mb-0 mt-5 md:mt-0"
+                >
+                    <img
+                        src="/assets/awards/images/image_right_1.png"
+                        class="w-full mt-3"
+                        alt=""
+                    />
+                </div>
+                <!-- right image end  -->
+            </div>
+
+            <!-- experiance a true section start -->
+            #}}
+        </div>
+    </section>
+    <!-- about_event image start end-->
+
+    <!-- AGENDA Section start  -->
+    <section class="agenda mt-20">
+        <div class="container">
+            <!-- agenda title start  -->
+            <div class="agenda_title m-auto text-center">
+                <p class="uppercase text-[#AFAFAF] font-semibold text-sm mb-4">
+                    {{agenda_teaser}}
+                </p>
+                <h3 class="uppercase text-5xl font-semibold">
+                    {{agenda_title}}
+                </h3>
+                <div
+                    class="divider w-[200px] h-1 bg-gray-400 relative mt-5 m-auto"
+                >
+                    <div
+                        class="w-[60px] h-1 bg-gray-800 absolute top-0 left-[35%]"
+                    ></div>
+                </div>
+
+                <p class="text-xl text-[#0B0D4E] mt-8">
+                    {{ agenda_description}}
+                </p>
+            </div>
+            <!-- agenda title end  -->
+
+            <!-- tabs container starts  -->
+
+            <div class="mb-4 border-gray-200 dark:border-gray-700 mt-8">
+                <ul
+                    class="flex flex-wrap justify-center -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400"
+                    id="tabExample"
+                    role="tablist"
+                >
+                    <li class="mr-2 relative" role="presentation">
+                        <button
+                            class="inline-block p-4 px-16 bg-[#0B0D4E] text-[#0B0D4E] text-xl font-bold"
+                            id="profile-tab-example"
+                            type="button"
+                            role="tab"
+                            aria-controls="profile-example"
+                            aria-selected="false"
+                        >
+                            Day 1
+                            <br />
+                            <span class="!font-light !text-sm"
+                                >March 10th 2022</span
+                            >
+                        </button>
+                        {{#
+                        <div
+                            class="arrow_botton hidden h-0 w-0 border-x-8 border-x-transparent border-t-[16px] border-t-[#0B0D4E] absolute top-18 left-[50%] z-20"
+                        ></div>
+                        #}}
+                    </li>
+                    <li class="mr-2" role="presentation">
+                        <button
+                            class="inline-block p-4 px-16 bg-[#0B0D4E] text-[#0B0D4E] text-xl font-bold"
+                            id="dashboard-tab-example"
+                            type="button"
+                            role="tab"
+                            aria-controls="dashboard-example"
+                            aria-selected="false"
+                        >
+                            Day 2 <br />
+                            <span class="!font-light !text-sm"
+                                >March 11th 2022</span
+                            >
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div id="tabContentExample">
+                <div
+                    class="hidden p-4 rounded-lg"
+                    id="profile-example"
+                    role="tabpanel"
+                    aria-labelledby="profile-tab-example"
+                >
+                    <div
+                        id="accordion-flush"
+                        data-accordion="collapse"
+                        data-active-classes="text-black"
+                        data-inactive-classes="text-gray-500"
+                    >
+                        {{day_1_agenda_data}}
+                        <h2 id="accordion-flush-heading-{{index}}">
+                            <button
+                                type="button"
+                                class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200"
+                                data-accordion-target="#accordion-flush-body-{{index}}"
+                                aria-expanded="true"
+                                aria-controls="accordion-flush-body-{{index}}"
+                            >
+                                <div class="flex flex-col">
+                                    <small class="inline-block">{{time}}</small>
+                                    <span class="inline-block">{{label}}</span>
+                                </div>
+                                <svg
+                                    data-accordion-icon
+                                    class="w-6 h-6 rotate-180 shrink-0"
+                                    fill="currentColor"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"
+                                    ></path>
+                                </svg>
+                            </button>
+                        </h2>
+                        <div
+                            id="accordion-flush-body-{{index}}"
+                            class="hidden"
+                            aria-labelledby="accordion-flush-heading-{{index}}"
+                        >
+                            <div
+                                class="py-5 font-light border-b border-gray-200 dark:border-gray-700"
+                            >
+                                <p
+                                    class="mb-2 text-gray-500 dark:text-gray-400"
+                                >
+                                    {{content}}
+                                </p>
+                            </div>
+                        </div>
+                        {{/day_1_agenda_data}} {{#
+                        <h2 id="accordion-flush-heading-2">
+                            <button
+                                type="button"
+                                class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200"
+                                data-accordion-target="#accordion-flush-body-2"
+                                aria-expanded="false"
+                                aria-controls="accordion-flush-body-2"
+                            >
+                                <div class="flex flex-col">
+                                    <small class="inline-block"
+                                        >8:47 AM - 10:00 AM</small
+                                    >
+                                    <span class="inline-block"
+                                        >Opening Conference</span
+                                    >
+                                </div>
+                                <svg
+                                    data-accordion-icon
+                                    class="w-6 h-6 shrink-0"
+                                    fill="currentColor"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"
+                                    ></path>
+                                </svg>
+                            </button>
+                        </h2>
+                        <div
+                            id="accordion-flush-body-2"
+                            class="hidden"
+                            aria-labelledby="accordion-flush-heading-2"
+                        >
+                            <div
+                                class="py-5 font-light border-b border-gray-200 dark:border-gray-700"
+                            >
+                                <p
+                                    class="mb-2 text-gray-500 dark:text-gray-400"
+                                >
+                                    Lorem ipsum dolor, sit amet consectetur
+                                    adipisicing elit. Incidunt consequuntur
+                                    aperiam dignissimos totam voluptates amet
+                                    eum nulla illum iure blanditiis quo ducimus
+                                    distinctio nemo praesentium et, quisquam
+                                    necessitatibus iste numquam?
+                                </p>
+                            </div>
+                        </div>
+                        <h2 id="accordion-flush-heading-3">
+                            <button
+                                type="button"
+                                class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200"
+                                data-accordion-target="#accordion-flush-body-3"
+                                aria-expanded="false"
+                                aria-controls="accordion-flush-body-3"
+                            >
+                                <div class="flex flex-col">
+                                    <small class="inline-block"
+                                        >11:15 AM - 11:30 AM</small
+                                    >
+                                    <span class="inline-block"
+                                        >Business Value of IT</span
+                                    >
+                                </div>
+                                <svg
+                                    data-accordion-icon
+                                    class="w-6 h-6 shrink-0"
+                                    fill="currentColor"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"
+                                    ></path>
+                                </svg>
+                            </button>
+                        </h2>
+                        <div
+                            id="accordion-flush-body-3"
+                            class="hidden"
+                            aria-labelledby="accordion-flush-heading-3"
+                        >
+                            <div
+                                class="py-5 font-light border-b border-gray-200 dark:border-gray-700"
+                            >
+                                <p
+                                    class="mb-2 text-gray-500 dark:text-gray-400"
+                                >
+                                    Lorem ipsum dolor sit amet consectetur,
+                                    adipisicing elit. Eaque, aspernatur?
+                                    Laboriosam quia mollitia quidem dolorem
+                                    incidunt alias porro, consequatur delectus,
+                                    molestiae saepe nihil adipisci ab dolor
+                                    molestias recusandae distinctio dolorum!
+                                </p>
+                            </div>
+                        </div>
+
+                        <h2 id="accordion-flush-heading-4">
+                            <button
+                                type="button"
+                                class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200"
+                                data-accordion-target="#accordion-flush-body-4"
+                                aria-expanded="false"
+                                aria-controls="accordion-flush-body-4"
+                            >
+                                <div class="flex flex-col">
+                                    <small class="inline-block"
+                                        >11:00 AM - 12:00 PM</small
+                                    >
+                                    <span class="inline-block">Break</span>
+                                </div>
+                                <svg
+                                    data-accordion-icon
+                                    class="w-6 h-6 shrink-0"
+                                    fill="currentColor"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"
+                                    ></path>
+                                </svg>
+                            </button>
+                        </h2>
+                        <div
+                            id="accordion-flush-body-4"
+                            class="hidden"
+                            aria-labelledby="accordion-flush-heading-4"
+                        >
+                            <div
+                                class="py-5 font-light border-b border-gray-200 dark:border-gray-700"
+                            >
+                                <p
+                                    class="mb-2 text-gray-500 dark:text-gray-400"
+                                >
+                                    Lorem ipsum dolor sit amet consectetur,
+                                    adipisicing elit. Eaque, aspernatur?
+                                    Laboriosam quia mollitia quidem dolorem
+                                    incidunt alias porro, consequatur delectus,
+                                    molestiae saepe nihil adipisci ab dolor
+                                    molestias recusandae distinctio dolorum!
+                                </p>
+                            </div>
+                        </div>
+
+                        <h2 id="accordion-flush-heading-5">
+                            <button
+                                type="button"
+                                class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200"
+                                data-accordion-target="#accordion-flush-body-5"
+                                aria-expanded="false"
+                                aria-controls="accordion-flush-body-5"
+                            >
+                                <div class="flex flex-col">
+                                    <small class="inline-block"
+                                        >1:15 PM - 2:15 PM</small
+                                    >
+                                    <span class="inline-block"
+                                        >Crowd Markets and the Gig Economy</span
+                                    >
+                                </div>
+                                <svg
+                                    data-accordion-icon
+                                    class="w-6 h-6 shrink-0"
+                                    fill="currentColor"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"
+                                    ></path>
+                                </svg>
+                            </button>
+                        </h2>
+                        <div
+                            id="accordion-flush-body-5"
+                            class="hidden"
+                            aria-labelledby="accordion-flush-heading-5"
+                        >
+                            <div
+                                class="py-5 font-light border-b border-gray-200 dark:border-gray-700"
+                            >
+                                <p
+                                    class="mb-2 text-gray-500 dark:text-gray-400"
+                                >
+                                    Lorem ipsum dolor sit amet consectetur,
+                                    adipisicing elit. Eaque, aspernatur?
+                                    Laboriosam quia mollitia quidem dolorem
+                                    incidunt alias porro, consequatur delectus,
+                                    molestiae saepe nihil adipisci ab dolor
+                                    molestias recusandae distinctio dolorum!
+                                </p>
+                            </div>
+                        </div>
+
+                        <h2 id="accordion-flush-heading-6">
+                            <button
+                                type="button"
+                                class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200"
+                                data-accordion-target="#accordion-flush-body-6"
+                                aria-expanded="false"
+                                aria-controls="accordion-flush-body-6"
+                            >
+                                <div class="flex flex-col">
+                                    <small class="inline-block"
+                                        >2:00 AM - 3:00 PM</small
+                                    >
+                                    <span class="inline-block">Break</span>
+                                </div>
+                                <svg
+                                    data-accordion-icon
+                                    class="w-6 h-6 shrink-0"
+                                    fill="currentColor"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"
+                                    ></path>
+                                </svg>
+                            </button>
+                        </h2>
+                        <div
+                            id="accordion-flush-body-6"
+                            class="hidden"
+                            aria-labelledby="accordion-flush-heading-6"
+                        >
+                            <div
+                                class="py-5 font-light border-b border-gray-200 dark:border-gray-700"
+                            >
+                                <p
+                                    class="mb-2 text-gray-500 dark:text-gray-400"
+                                >
+                                    Lorem ipsum dolor sit amet consectetur,
+                                    adipisicing elit. Eaque, aspernatur?
+                                    Laboriosam quia mollitia quidem dolorem
+                                    incidunt alias porro, consequatur delectus,
+                                    molestiae saepe nihil adipisci ab dolor
+                                    molestias recusandae distinctio dolorum!
+                                </p>
+                            </div>
+                        </div>
+
+                        <h2 id="accordion-flush-heading-7">
+                            <button
+                                type="button"
+                                class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200"
+                                data-accordion-target="#accordion-flush-body-7"
+                                aria-expanded="false"
+                                aria-controls="accordion-flush-body-7"
+                            >
+                                <div class="flex flex-col">
+                                    <small class="inline-block"
+                                        >3:00 PM - 5:00 PM</small
+                                    >
+                                    <span class="inline-block"
+                                        >Technology and Consumer Behaviour</span
+                                    >
+                                </div>
+                                <svg
+                                    data-accordion-icon
+                                    class="w-6 h-6 shrink-0"
+                                    fill="currentColor"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"
+                                    ></path>
+                                </svg>
+                            </button>
+                        </h2>
+                        <div
+                            id="accordion-flush-body-7"
+                            class="hidden"
+                            aria-labelledby="accordion-flush-heading-7"
+                        >
+                            <div
+                                class="py-5 font-light border-b border-gray-200 dark:border-gray-700"
+                            >
+                                <p
+                                    class="mb-2 text-gray-500 dark:text-gray-400"
+                                >
+                                    Lorem ipsum dolor sit amet consectetur,
+                                    adipisicing elit. Eaque, aspernatur?
+                                    Laboriosam quia mollitia quidem dolorem
+                                    incidunt alias porro, consequatur delectus,
+                                    molestiae saepe nihil adipisci ab dolor
+                                    molestias recusandae distinctio dolorum!
+                                </p>
+                            </div>
+                        </div>
+                        #}}
+                    </div>
+                </div>
+
+                <div
+                    class="hidden p-4 rounded-lg"
+                    id="dashboard-example"
+                    role="tabpanel"
+                    aria-labelledby="dashboard-tab-example"
+                >
+                    <div
+                        id="accordion-flush"
+                        data-accordion="collapse"
+                        data-active-classes="text-black"
+                        data-inactive-classes="text-gray-500"
+                    >
+                        {{agenda_day_2_data}}
+                        <h2 id="accordion-flush-heading2-{{index}}">
+                            <button
+                                type="button"
+                                class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200"
+                                data-accordion-target="#accordion-flush-body2-{{index}}"
+                                aria-expanded="true"
+                                aria-controls="accordion-flush-body-{{index}}"
+                            >
+                                <div class="flex flex-col">
+                                    <small class="inline-block"
+                                        >{{time_day2}}</small
+                                    >
+                                    <span class="inline-block"
+                                        >{{label_day2}}</span
+                                    >
+                                </div>
+                                <svg
+                                    data-accordion-icon
+                                    class="w-6 h-6 rotate-180 shrink-0"
+                                    fill="currentColor"
+                                    viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"
+                                    ></path>
+                                </svg>
+                            </button>
+                        </h2>
+                        <div
+                            id="accordion-flush-body2-{{index}}"
+                            class="hidden"
+                            aria-labelledby="accordion-flush-heading2-{{index}}"
+                        >
+                            <div
+                                class="py-5 font-light border-b border-gray-200 dark:border-gray-700"
+                            >
+                                <p
+                                    class="mb-2 text-gray-500 dark:text-gray-400"
+                                >
+                                    {{content_day2}}
+                                </p>
+                            </div>
+                        </div>
+                        {{/agenda_day_2_data}}
+                    </div>
+                </div>
+            </div>
+            <!-- tabs container end  -->
+            <div class="block download_agenda text-center mt-8">
+                {{if show_download_agenda}}
+                <a
+                    href="{{upload_download_agenda_file}}"
+                    download
+                    class="py-3 px-14 text-black bg-transparent border border-black hover:bg-black hover:text-white cursor-pointer"
+                    >Download Agenda</a
+                >
+                {{/if show_download_agenda}}
+            </div>
+        </div>
+    </section>
+    <!-- AGENDA Section end  -->
+
+    <!-- timeline section start  -->
+    <section class="timeline relative mt-20">
+        <div class="container">
+            <!-- Our speakers title start  -->
+            <div class="agenda_title m-auto text-center mb-16">
+                <p class="uppercase text-[#AFAFAF] font-semibold text-sm mb-4">
+                    CHECK OUT
+                </p>
+                <h3 class="uppercase text-5xl font-semibold">Our Speakers</h3>
+                <div
+                    class="divider w-[200px] h-1 bg-gray-400 relative mt-5 m-auto"
+                >
+                    <div
+                        class="w-[60px] h-1 bg-gray-800 absolute top-0 left-[35%]"
+                    ></div>
+                </div>
+            </div>
+            <!-- Our speakers title end  -->
+
+            <div class="main">
+                <div class="timeline_content">
+                    <div class="mb-4 border-b border-gray-200">
+                        <ul
+                            class="flex flex-wrap justify-center -mb-px text-sm font-medium text-center"
+                            id="myTab"
+                            data-tabs-toggle="#speakers_content"
+                            role="tablist"
+                        >
+                            <li class="mr-2" role="presentation">
+                                <button
+                                    class="inline-block p-4 border-b-2 rounded-t-lg text-base font-semibold"
+                                    id="agenda-tab"
+                                    data-tabs-target="#agenda"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="agenda"
+                                    aria-selected="false"
+                                >
+                                    Advisory
+                                </button>
+                            </li>
+                            <li class="mr-2" role="presentation">
+                                <button
+                                    class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 text-base font-semibold"
+                                    id="jury-tab"
+                                    data-tabs-target="#jury"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="jury"
+                                    aria-selected="false"
+                                >
+                                    Jury
+                                </button>
+                            </li>
+                            <li class="mr-2" role="presentation">
+                                <button
+                                    class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 text-base font-semibold"
+                                    id="settings-tab"
+                                    data-tabs-target="#settings"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="settings"
+                                    aria-selected="false"
+                                >
+                                    Speakers
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="speakers_content">
+                        <div
+                            class="hidden p-4 rounded-lg"
+                            id="agenda"
+                            role="tabpanel"
+                            aria-labelledby="agenda-tab"
+                        >
+                            <!-- timeline agenda section start  -->
+                            <section id="agenda">
+                                <div
+                                    class="grid grid-cols-1 md:grid-cols-4 gap-10"
+                                >
+                                    <div class="col">
+                                        {{speakers_agenda_section_first_column}}
+                                        <div class="image_box mb-8">
+                                            <div
+                                                class="overlay relative rounded-[20px]"
+                                            >
+                                                {{agenda_speaker_image}}
+                                                <img
+                                                    class="relative"
+                                                    src="{{url}}"
+                                                    alt="{{alt}}"
+                                                />
+                                                {{/agenda_speaker_image}}
+                                                <p
+                                                    class="absolute bottom-1 left-2 text-white ml-2 z-40"
+                                                >
+                                                    <span
+                                                        class="font-bold !text-sm lg:!text-sm"
+                                                        >{{agenda_speaker_name}}</span
+                                                    >
+                                                    <br />
+                                                    <span
+                                                        class="!text-xs lg:!text-sm"
+                                                    >
+                                                        {{agenda_speaker_designation}}</span
+                                                    >
+                                                    <br />
+                                                    <span
+                                                        class="!text-xs lg:!text-sm text-green-400 speaker__company hidden"
+                                                    >
+                                                        {{agenda_speaker_company_name}}</span
+                                                    >
+                                                </p>
+                                            </div>
+                                        </div>
+                                        {{/speakers_agenda_section_first_column}}
+                                    </div>
+
+                                    {{# second column #}}
+                                    <div class="col">
+                                        {{speakers_agenda_section_second_column}}
+                                        <div class="image_box mb-8">
+                                            <div
+                                                class="overlay relative rounded-[20px]"
+                                            >
+                                                {{agenda_speaker_image_col_2}}
+                                                <img
+                                                    class="relative"
+                                                    src="{{url}}"
+                                                    alt="{{alt}}"
+                                                />
+                                                {{/agenda_speaker_image_col_2}}
+                                                <p
+                                                    class="absolute bottom-1 left-2 text-white ml-2 z-40"
+                                                >
+                                                    <span
+                                                        class="font-bold !text-sm lg:!text-sm"
+                                                        >{{agenda_speaker_name_col_2}}</span
+                                                    >
+                                                    <br />
+                                                    <span
+                                                        class="!text-xs lg:!text-sm"
+                                                    >
+                                                        {{agenda_speaker_designation_col_2}}</span
+                                                    >
+                                                    <br />
+                                                    <span
+                                                        class="!text-xs lg:!text-sm text-green-400 speaker__company hidden"
+                                                    >
+                                                        {{agenda_speaker_company_name_col_2}}</span
+                                                    >
+                                                </p>
+                                            </div>
+                                        </div>
+                                        {{/speakers_agenda_section_second_column}}
+                                    </div>
+
+                                    {{# third column #}}
+                                    <div class="col">
+                                        {{speakers_agenda_section_third_column}}
+                                        <div class="image_box mb-8">
+                                            <div
+                                                class="overlay relative rounded-[20px]"
+                                            >
+                                                {{agenda_speaker_image_col_3}}
+                                                <img
+                                                    class="relative"
+                                                    src="{{url}}"
+                                                    alt="{{alt}}"
+                                                />
+                                                {{/agenda_speaker_image_col_3}}
+                                                <p
+                                                    class="absolute bottom-1 left-2 text-white ml-2 z-40"
+                                                >
+                                                    <span
+                                                        class="font-bold !text-sm lg:!text-sm"
+                                                        >{{agenda_speaker_name_col_3}}</span
+                                                    >
+                                                    <br />
+                                                    <span
+                                                        class="!text-xs lg:!text-sm"
+                                                    >
+                                                        {{agenda_speaker_designation_col_3}}</span
+                                                    >
+                                                    <br />
+                                                    <span
+                                                        class="!text-xs lg:!text-sm text-green-400 speaker__company hidden"
+                                                    >
+                                                        {{agenda_speaker_company_name_col_3}}</span
+                                                    >
+                                                </p>
+                                            </div>
+                                        </div>
+                                        {{/speakers_agenda_section_third_column}}
+                                    </div>
+
+                                    {{# fourth column #}}
+                                    <div class="col">
+                                        {{speakers_agenda_section_fourth_column}}
+                                        <div class="image_box mb-8">
+                                            <div
+                                                class="overlay relative rounded-[20px]"
+                                            >
+                                                {{agenda_speaker_image_col_4}}
+                                                <img
+                                                    class="relative"
+                                                    src="{{url}}"
+                                                    alt="{{alt}}"
+                                                />
+                                                {{/agenda_speaker_image_col_4}}
+                                                <p
+                                                    class="absolute bottom-1 left-2 text-white ml-2 z-40"
+                                                >
+                                                    <span
+                                                        class="font-bold !text-sm lg:!text-base"
+                                                        >{{agenda_speaker_name_col_4}}</span
+                                                    >
+                                                    <br />
+                                                    <span
+                                                        class="!text-xs lg:!text-sm"
+                                                    >
+                                                        {{agenda_speaker_designation_col_4}}</span
+                                                    >
+                                                    <br />
+                                                    <span
+                                                        class="!text-xs lg:!text-sm text-green-400 speaker__company hidden"
+                                                    >
+                                                        {{agenda_speaker_company_name_col_4}}</span
+                                                    >
+                                                </p>
+                                            </div>
+                                        </div>
+                                        {{/speakers_agenda_section_fourth_column}}
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- timeline agenda section end  -->
+                        </div>
+                        <div
+                            class="hidden p-4 rounded-lg"
+                            id="jury"
+                            role="tabpanel"
+                            aria-labelledby="jury-tab"
+                        >
+                            <!-- timeline jury section start -->
+                            <section id="jury">
+                                <div
+                                    class="grid grid-cols-1 md:grid-cols-4 gap-10 md:mr-0"
+                                >
+                                    {{# first column #}}
+                                    <div class="col">
+                                        {{speakers_jury_section_first_column}}
+                                        <div class="image_box mb-8">
+                                            <div
+                                                class="overlay relative rounded-[20px]"
+                                            >
+                                                {{jury_speaker_image}}
+                                                <img
+                                                    class="relative"
+                                                    src="{{url}}"
+                                                    alt="{{alt}}"
+                                                />
+                                                {{/jury_speaker_image}}
+                                                <p
+                                                    class="absolute bottom-1 left-2 text-white ml-2 z-40"
+                                                >
+                                                    <span
+                                                        class="font-bold !text-sm lg:!text-sm"
+                                                        >{{jury_speaker_name}}</span
+                                                    >
+                                                    <br />
+                                                    <span
+                                                        class="!text-xs lg:!text-sm"
+                                                    >
+                                                        {{jury_speaker_designation}}</span
+                                                    >
+                                                    <br />
+                                                    <span
+                                                        class="!text-xs lg:!text-sm text-green-400 speaker__company hidden"
+                                                    >
+                                                        {{jury_speaker_company_name}}</span
+                                                    >
+                                                </p>
+                                            </div>
+                                        </div>
+                                        {{/speakers_jury_section_first_column}}
+                                    </div>
+
+                                    {{# second column #}}
+                                    <div class="col">
+                                        {{speakers_jury_section_second_column}}
+                                        <div class="image_box mb-8">
+                                            <div
+                                                class="overlay relative rounded-[20px]"
+                                            >
+                                                {{jury_speaker_image_col_2}}
+                                                <img
+                                                    class="relative"
+                                                    src="{{url}}"
+                                                    alt="{{alt}}"
+                                                />
+                                                {{/jury_speaker_image_col_2}}
+                                                <p
+                                                    class="absolute bottom-1 left-2 text-white ml-2 z-40"
+                                                >
+                                                    <span
+                                                        class="font-bold !text-sm lg:!text-sm"
+                                                        >{{jury_speaker_name}}</span
+                                                    >
+                                                    <br />
+                                                    <span
+                                                        class="!text-xs lg:!text-sm"
+                                                    >
+                                                        {{jury_speaker_designation_col_2}}</span
+                                                    >
+                                                    <br />
+                                                    <span
+                                                        class="!text-xs lg:!text-sm text-green-400 speaker__company hidden"
+                                                    >
+                                                        {{jury_speaker_company_name_col_2}}</span
+                                                    >
+                                                </p>
+                                            </div>
+                                        </div>
+                                        {{/speakers_jury_section_second_column}}
+                                    </div>
+
+                                    {{# third column #}}
+                                    <div class="col">
+                                        {{speakers_jury_section_third_column}}
+                                        <div class="image_box mb-8">
+                                            <div
+                                                class="overlay relative rounded-[20px]"
+                                            >
+                                                {{jury_speaker_image_col_3}}
+                                                <img
+                                                    class="relative"
+                                                    src="{{url}}"
+                                                    alt="{{alt}}"
+                                                />
+                                                {{/jury_speaker_image_col_3}}
+                                                <p
+                                                    class="absolute bottom-1 left-2 text-white ml-2 z-40"
+                                                >
+                                                    <span
+                                                        class="font-bold !text-sm lg:!text-sm"
+                                                        >{{jury_speaker_name_col_3}}</span
+                                                    >
+                                                    <br />
+                                                    <span
+                                                        class="!text-xs lg:!text-sm"
+                                                    >
+                                                        {{jury_speaker_designation_col_3}}</span
+                                                    >
+                                                    <br />
+                                                    <span
+                                                        class="!text-xs lg:!text-sm text-green-400 speaker__company hidden"
+                                                    >
+                                                        {{jury_speaker_company_name_col_3}}</span
+                                                    >
+                                                </p>
+                                            </div>
+                                        </div>
+                                        {{/speakers_jury_section_third_column}}
+                                    </div>
+
+                                    {{# fourth column #}}
+                                    <div class="col">
+                                        {{speakers_jury_section_fourth_column}}
+                                        <div class="image_box mb-8">
+                                            <div
+                                                class="overlay relative rounded-[20px]"
+                                            >
+                                                {{jury_speaker_image_col_4}}
+                                                <img
+                                                    class="relative"
+                                                    src="{{url}}"
+                                                    alt="{{alt}}"
+                                                />
+                                                {{/jury_speaker_image_col_4}}
+                                                <p
+                                                    class="absolute bottom-1 left-2 text-white ml-2 z-40"
+                                                >
+                                                    <span
+                                                        class="font-bold !text-sm lg:!text-sm"
+                                                        >{{jury_speaker_name_col_4}}</span
+                                                    >
+                                                    <br />
+                                                    <span
+                                                        class="!text-xs lg:!text-sm"
+                                                    >
+                                                        {{jury_speaker_designation_col_4}}</span
+                                                    >
+                                                    <br />
+                                                    <span
+                                                        class="!text-xs lg:!text-sm text-green-400 speaker__company hidden"
+                                                    >
+                                                        {{jury_speaker_company_name_col_4}}</span
+                                                    >
+                                                </p>
+                                            </div>
+                                        </div>
+                                        {{/speakers_jury_section_fourth_column}}
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- timeline jury section end -->
+                        </div>
+                        <div
+                            class="hidden p-4 rounded-lg"
+                            id="settings"
+                            role="tabpanel"
+                            aria-labelledby="settings-tab"
+                        >
+                            <!-- timeline speakers section start -->
+                            <section id="speakers">
+                                <div
+                                    class="grid grid-cols-1 md:grid-cols-4 gap-10 md:mr-0"
+                                >
+                                    {{# first column #}}
+                                    <div class="col">
+                                        {{speakers_section_first_column}}
+                                        <div class="image_box mb-8">
+                                            <div
+                                                class="overlay relative rounded-[20px]"
+                                            >
+                                                {{speaker_image}}
+                                                <img
+                                                    class="relative"
+                                                    src="{{url}}"
+                                                    alt="{{alt}}"
+                                                />
+                                                {{/speaker_image}}
+                                                <p
+                                                    class="absolute bottom-1 left-2 text-white ml-2 z-40"
+                                                >
+                                                    <span
+                                                        class="font-bold !text-sm lg:!text-sm"
+                                                        >{{speaker_name}}</span
+                                                    >
+                                                    <br />
+                                                    <span
+                                                        class="!text-xs lg:!text-sm"
+                                                    >
+                                                        {{speaker_designation}}</span
+                                                    >
+                                                    <br />
+                                                    <span
+                                                        class="!text-xs lg:!text-sm text-green-400 speaker__company hidden"
+                                                    >
+                                                        {{speaker_company_name}}</span
+                                                    >
+                                                </p>
+                                            </div>
+                                        </div>
+                                        {{/speakers_section_first_column}}
+                                    </div>
+
+                                    {{# second column #}}
+                                    <div class="col">
+                                        {{speakers_section_second_column}}
+                                        <div class="image_box mb-8">
+                                            <div
+                                                class="overlay relative rounded-[20px]"
+                                            >
+                                                {{speaker_image_col_2}}
+                                                <img
+                                                    class="relative"
+                                                    src="{{url}}"
+                                                    alt="{{alt}}"
+                                                />
+                                                {{/speaker_image_col_2}}
+                                                <p
+                                                    class="absolute bottom-1 left-2 text-white ml-2 z-40"
+                                                >
+                                                    <span
+                                                        class="font-bold !text-sm lg:!text-sm"
+                                                        >{{speaker_name_col_2}}</span
+                                                    >
+                                                    <br />
+                                                    <span
+                                                        class="!text-xs lg:!text-sm"
+                                                    >
+                                                        {{speaker_designation_col_2}}</span
+                                                    >
+                                                    <br />
+                                                    <span
+                                                        class="!text-xs lg:!text-sm text-green-400 speaker__company hidden"
+                                                    >
+                                                        {{speaker_company_name_col_2}}</span
+                                                    >
+                                                </p>
+                                            </div>
+                                        </div>
+                                        {{/speakers_section_second_column}}
+                                    </div>
+
+                                    {{# third column #}}
+                                    <div class="col">
+                                        {{speakers_section_third_column}}
+                                        <div class="image_box mb-8">
+                                            <div
+                                                class="overlay relative rounded-[20px]"
+                                            >
+                                                {{speaker_image_col_3}}
+                                                <img
+                                                    class="relative"
+                                                    src="{{url}}"
+                                                    alt="{{alt}}"
+                                                />
+                                                {{/speaker_image_col_3}}
+                                                <p
+                                                    class="absolute bottom-1 left-2 text-white ml-2 z-40"
+                                                >
+                                                    <span
+                                                        class="font-bold !text-sm lg:!text-sm"
+                                                        >{{speaker_name_col_3}}</span
+                                                    >
+                                                    <br />
+                                                    <span
+                                                        class="!text-xs lg:!text-sm"
+                                                    >
+                                                        {{speaker_designation_col_3}}</span
+                                                    >
+                                                    <br />
+                                                    <span
+                                                        class="!text-xs lg:!text-sm text-green-400 speaker__company hidden"
+                                                    >
+                                                        {{speaker_company_name_col_3}}</span
+                                                    >
+                                                </p>
+                                            </div>
+                                        </div>
+                                        {{/speakers_section_third_column}}
+                                    </div>
+
+                                    {{# fourth column #}}
+                                    <div class="col">
+                                        {{speakers_section_fourth_column}}
+                                        <div class="image_box mb-8">
+                                            <div
+                                                class="overlay relative rounded-[20px]"
+                                            >
+                                                {{speaker_image_col_4}}
+                                                <img
+                                                    class="relative"
+                                                    src="{{url}}"
+                                                    alt="{{alt}}"
+                                                />
+                                                {{/speaker_image_col_4}}
+                                                <p
+                                                    class="absolute bottom-1 left-2 text-white ml-2 z-40"
+                                                >
+                                                    <span
+                                                        class="font-bold !text-sm lg:!text-sm"
+                                                        >{{speaker_name_col_4}}</span
+                                                    >
+                                                    <br />
+                                                    <span
+                                                        class="!text-xs lg:!text-sm"
+                                                    >
+                                                        {{speaker_designation_col_4}}</span
+                                                    >
+                                                    <br />
+                                                    <span
+                                                        class="!text-xs lg:!text-sm text-green-400 speaker__company hidden"
+                                                    >
+                                                        {{speaker_company_name_col_4}}</span
+                                                    >
+                                                </p>
+                                            </div>
+                                        </div>
+                                        {{/speakers_section_fourth_column}}
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- timeline speakers section end -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- timeline nav section start  -->
+                {{#
+                <div class="nav_container relative">
+                    <nav class="navigation_main">
+                        <ul
+                            class="flex flex-col justify-end place-items-end"
+                            id="nav"
+                        >
+                            <li class="px-20 py-10 pr-4 relative">
+                                <a href="#agenda"> Agenda </a>
+                            </li>
+                            <li class="px-20 py-10 pr-4 relative">
+                                <a href="#jury"> Jury</a>
+                            </li>
+                            <li class="px-20 py-10 pr-4 relative">
+                                <a href="#speakers">Speakers</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                #}}
+                <!-- timeline nav section end  -->
+            </div>
+        </div>
+    </section>
+    <!-- timeline section end  -->
+
+    <!-- our sponsor section starts  -->
+    <section class="sponsors mt-20" id="sponsors">
+        <div class="container">
+            <!-- Sponsors title start  -->
+            <div class="agenda_title m-auto text-center">
+                <p class="uppercase text-[#AFAFAF] font-semibold text-sm mb-4">
+                    CHECK OUT
+                </p>
+                <h3 class="uppercase text-5xl font-semibold">Our Sponsors</h3>
+                <div
+                    class="divider w-[200px] h-1 bg-gray-400 relative mt-5 m-auto"
+                >
+                    <div
+                        class="w-[60px] h-1 bg-gray-800 absolute top-0 left-[35%]"
+                    ></div>
+                </div>
+            </div>
+            <!-- Sponsors title end  -->
+
+            <!-- slider starts  -->
+            <div class="sponsor_slider mt-16">
+                {{sponsors}}
+                <div class="sponsor-slide">
+                    <div
+                        class="image_wrapper bg-white shadow-lg rounded-xl p-8"
+                    >
+                        <div
+                            class="flex flex-col justify-center items-center gap-6"
+                        >
+                            <img src="{{sponsor_image}}" alt="" />
+                            <small class="uppercase"
+                                >{{sponsor_type_text}}</small
+                            >
+                        </div>
+                    </div>
+                </div>
+                {{/sponsors}}
+            </div>
+            <!-- slider end  -->
+            <div class="block download_agenda text-center mt-8">
+                <a
+                    target="_blank"
+                    href="{{become_a_sponsor_link}}"
+                    class="py-3 px-14 text-black bg-transparent border border-black hover:bg-black hover:text-white cursor-pointer"
+                    >Become a Sponsor</a
+                >
+            </div>
+        </div>
+    </section>
+    <!-- our sponsor section ends  -->
+
+    <!-- testimonial section start  -->
+    <section class="testimonials bg-[#F9FAFB] text-black mt-20 py-5">
+        <div class="container">
+            <!-- slider code start  -->
+            <div class="testimonial_slider">
+                <!-- single slide start -->
+                {{testimonials}}
+                <div class="slide_wrapper m-auto">
+                    <div
+                        class="grid grid-cols-1 lg:grid-cols-12 place-content-around place-items-stretch"
+                    >
+                        <div class="vertical_text relative">
+                            <p
+                                class="relative text-center mb-3 lg:mb-0 lg:absolute lg:-rotate-90 lg:top-[50%] text-sm text-[#AFAFAF] font-bold tracking-widest uppercase"
+                            >
+                                Testimonials
+                            </p>
+                        </div>
+                        <div class="info col-span-1 lg:col-span-3">
+                            <div
+                                class="flex flex-col gap-3 items-center justify-center text-center"
+                            >
+                                <div class="testimonial_avatar">
+                                    <img
+                                        class="relative"
+                                        src="{{reviewer_avatar}}"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="name text-lg font-bold">
+                                    {{name}}
+                                </div>
+                                <div class="designation text-xs text-[#979797]">
+                                    {{designation}}
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="testimonial_divider w-0.5 h-52 bg-gray-400 ml-16 hidden lg:block"
+                        ></div>
+                        <div class="testimonial col-span-1 lg:col-span-7">
+                            <blockquote class="!text-base lg:!text-xl">
+                                {{review}}
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                {{/testimonials}}
+                <!-- single slide end  -->
+
+                {{#
+                <!-- single slide start -->
+                <div class="slide_wrapper m-auto">
+                    <div
+                        class="grid grid-cols-1 lg:grid-cols-12 place-content-around place-items-stretch"
+                    >
+                        <div class="vertical_text relative">
+                            <p
+                                class="relative text-center mb-3 lg:mb-0 lg:absolute lg:-rotate-90 lg:top-[50%] text-sm text-[#AFAFAF] font-bold tracking-widest uppercase"
+                            >
+                                Testimonials
+                            </p>
+                        </div>
+                        <div class="info col-span-1 lg:col-span-3">
+                            <div
+                                class="flex flex-col gap-3 items-center justify-center text-center"
+                            >
+                                <div class="testimonial_avatar">
+                                    <img
+                                        class="relative"
+                                        src="https://res.cloudinary.com/bizzaboprod/image/upload/c_crop,g_custom,f_auto/w_270,h_270,c_fill,g_face,fl_any_format,q_auto:best/q2ogubgq18wsf91cerew.jpg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="name text-lg font-bold">
+                                    Shikha Srivastava
+                                </div>
+                                <div class="designation text-xs text-[#979797]">
+                                    Diector & Board Member <br />
+                                    Centre for Development of Telematics
+                                    (C-DOT), GoI
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="testimonial_divider w-0.5 h-52 bg-gray-400 ml-16 hidden lg:block"
+                        ></div>
+                        <div class="testimonial col-span-1 lg:col-span-7">
+                            <blockquote class="!text-base lg:!text-xl">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Suscipit tenetur hic sunt
+                                eligendi! Distinctio, odit architecto? Delectus
+                                perspiciatis, dolore error maiores dolorum,
+                                tempore ratione dicta vel, dolorem molestias
+                                labore assumenda?
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <!-- single slide end  -->
+
+                <!-- single slide start -->
+                <div class="slide_wrapper m-auto">
+                    <div
+                        class="grid grid-cols-1 lg:grid-cols-12 place-content-around place-items-stretch"
+                    >
+                        <div class="vertical_text relative">
+                            <p
+                                class="relative text-center mb-3 lg:mb-0 lg:absolute lg:-rotate-90 lg:top-[50%] text-sm text-[#AFAFAF] font-bold tracking-widest uppercase"
+                            >
+                                Testimonials
+                            </p>
+                        </div>
+                        <div class="info col-span-1 lg:col-span-3">
+                            <div
+                                class="flex flex-col gap-3 items-center justify-center text-center"
+                            >
+                                <div class="testimonial_avatar">
+                                    <img
+                                        class="relative"
+                                        src="https://res.cloudinary.com/bizzaboprod/image/upload/c_crop,g_custom,f_auto/w_270,h_270,c_fill,g_face,fl_any_format,q_auto:best/q2ogubgq18wsf91cerew.jpg"
+                                        alt=""
+                                    />
+                                </div>
+                                <div class="name text-lg font-bold">
+                                    Shikha Srivastava
+                                </div>
+                                <div class="designation text-xs text-[#979797]">
+                                    Diector & Board Member <br />
+                                    Centre for Development of Telematics
+                                    (C-DOT), GoI
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="testimonial_divider w-0.5 h-52 bg-gray-400 ml-16 hidden lg:block"
+                        ></div>
+                        <div class="testimonial col-span-1 lg:col-span-7">
+                            <blockquote class="!text-base lg:!text-xl">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Suscipit tenetur hic sunt
+                                eligendi! Distinctio, odit architecto? Delectus
+                                perspiciatis, dolore error maiores dolorum,
+                                tempore ratione dicta vel, dolorem molestias
+                                labore assumenda?
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <!-- single slide end  -->
+                #}}
+            </div>
+            <!-- slider code end  -->
+        </div>
+    </section>
+    <!-- testimonial section end  -->
+
+    <!-- footer partial  -->
+    {{ partial:awards/footer }}
+</div>
+
+<!-- floating-counter start -->
+<div
+    class="counter_section sticky bottom-0 w-full bg-[url('/assets/awards/images/counterbackground.png')] text-white z-40 py-6 bg-no-repeat bg-center bg-cover mx-auto"
+>
+    <div class="container">
+        <div class="grid grid-cols-4 md:grid-cols-4 gap-5">
+            <div
+                class="text-2xl md:text-4xl font-bold relative text-center border-r-2 border-white"
+            >
+                <span
+                    class="days"
+                    data-date="{{date_of_event}}"
+                    data-year="{{event_year}}"
+                >
+                </span>
+
+                <span
+                    class="block text-sm md:text-xs mt-1 text-[#C9C1CF] font-light"
+                    >Days</span
+                >
+            </div>
+            <div
+                class="text-2xl md:text-4xl font-bold relative text-center border-r-2 border-white"
+            >
+                <span class="hours"></span>
+
+                <span
+                    class="block mt-1 text-sm md:text-xs text-[#C9C1CF] font-light"
+                    >Hours</span
+                >
+            </div>
+            <div
+                class="text-2xl md:text-4xl font-bold relative text-center border-r-2 border-white"
+            >
+                <span class="minutes"></span>
+
+                <span
+                    class="block text-sm md:text-xs mt-1 text-[#C9C1CF] font-light"
+                    >Minutes</span
+                >
+            </div>
+            <div class="text-2xl md:text-4xl font-bold relative text-center">
+                <span class="seconds"></span>
+                <span
+                    class="block text-sm md:text-xs mt-1 text-[#C9C1CF] font-light"
+                    >Seconds</span
+                >
+            </div>
+        </div>
+    </div>
+</div>
+<!-- floating-counter end -->
+
+{{# scroll to top #}}
+<div class="scrolltop">
+    <div class="scroll icon">&uarr;</div>
+</div>

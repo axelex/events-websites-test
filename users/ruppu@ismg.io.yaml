@@ -1,0 +1,14 @@
+name: 'Rajendra Uppu'
+super: true
+id: 1dd92669-771f-44fc-b219-8dbdb80f4855
+password_hash: $2y$10$md.yl6vD2PzwocT67axu1uDSKSahzd/rvO66M6VSBw95tDiNZhHfi
+preferences:
+  collections:
+    awards:
+      columns:
+        - title
+        - slug
+    microsoft_mes:
+      columns:
+        - slug
+        - title

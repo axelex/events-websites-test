@@ -1,0 +1,14 @@
+title: 'Microsoft - MES'
+template: microsoft_mes/show
+layout: layout
+mount: 2291e277-3c30-4c22-87f9-4f196b70abc8
+revisions: false
+route: '/{mount}/{slug}'
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'

@@ -1,0 +1,106 @@
+{{ partial:microsoft_mes/nav }}
+
+<!-- content section start -->
+<div class="content_wrapper mt-4 md:mt-14">
+    <div class="container">
+        <div class="hero_title mb-6 md:mb-12">
+            <div
+                class="text-black text-center text-xl sm:text-3xl xl:text-5xl leading-[3rem] caption"
+            >
+                {{hero_title}}
+            </div>
+        </div>
+        <div class="content">
+            <p class="leading-loose text-justify text-[#595a5c]">
+                {{overview_text_paragraph_1}}
+            </p>
+            <p class="leading-loose text-justify text-[#595a5c] mt-4">
+                {{overview_text_paragraph_2}}
+            </p>
+            <p class="leading-loose text-justify text-[#595a5c] mt-4">
+                {{overview_text_paragraph_3_custom}}
+            </p>
+            <p class="leading-loose text-justify text-[#595a5c] mt-4">
+                {{overview_text_paragraph_4_custom}}
+            </p>
+            <ul class="list-[circle] list-inside m-2 ml-6 text-[#595a5c]">
+                {{masterclass_bullet_points}}
+                <li class="text-lg">
+                    <span class="text-sm">{{masterclass_list_points}}</span>
+                </li>
+                {{/masterclass_bullet_points}}
+            </ul>
+            <div class="text-center mt-6 md:mt-12">
+                <a
+                    href="{{registration_link}}"
+                    target="_blank"
+                    class="bg-[#0c6aff] px-14 py-4 border border-white drop-shadow-xl text-white text-xl hover:bg-[#F5A800] hover:drop-shadow-2xl"
+                >
+                    Register
+                </a>
+            </div>
+        </div>
+        <div class="event-location mt-6 md:mt-20">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 justify-between">
+                {{event_venue}}
+                <div class="venue-div text-center">
+                    <img
+                        class="w-[150px] mx-auto"
+                        src="{{venue_image}}"
+                        alt=""
+                    />
+                    <p class="font-bold leading-tight mt-2">{{venue_city}}</p>
+                    <p class="leading-tight mt-2">
+                        <span class="font-bold">Date:</span> {{event_date}}
+                    </p>
+                    <p class="leading-tight mt-2">
+                        <span class="font-bold">Venue: </span>
+                        {{venue_location_address}}
+                    </p>
+                </div>
+                {{/event_venue}}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Speaker section start -->
+<div class="speaker-section mt-16 md:mt-20">
+    <div class="container">
+        <div class="speaker-title m-auto text-center mb-8 md:mb-14">
+            <h3 class="uppercase text-5xl font-semibold">{{speaker_title}}</h3>
+            <div class="divider w-[200px] h-1 bg-gray-400 relative mt-5 m-auto">
+                <div
+                    class="w-[60px] h-1 bg-gray-800 absolute top-0 left-[35%]"
+                ></div>
+            </div>
+        </div>
+        <div class="speaker-content">
+            <div class="md:flex justify-evenly lg:w-5/6 md:w-4/5 md:mx-auto">
+                <div class="order-2 md:order-1 md:pr-10 md:w-1/2">
+                    <img
+                        class="rounded-full border-[5px] border-[#0c6aff] md:w-[400px] w-[250px] mx-auto md:mx-0 mb-5 md:mb-0"
+                        src="{{speaker_headshot_image}}"
+                        alt=""
+                    />
+                </div>
+                <div
+                    class="order-1 md:order-2 md:pl-10 md:w-1/2 md:flex md:flex-col md:justify-center"
+                >
+                    <h3 class="text-5xl font-medium text-[#0c6aff]">
+                        {{speaker_name}}
+                    </h3>
+                    <p class="text-lg">{{speaker_designation}}</p>
+                    <p class="text-lg">{{speaker_company}}</p>
+                    <p class="mt-4">{{speaker_description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{partial:microsoft_mes/footer}} {{# scroll to top #}}
+<div class="scrolltop">
+    <div class="scroll icon">&uarr;</div>
+</div>
+<script src="{{ mix src='/js/microsoft_mes.js' }}"></script>

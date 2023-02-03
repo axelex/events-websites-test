@@ -1,0 +1,198 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: first_name
+        field:
+          placeholder: 'Enter first name'
+          input_type: text
+          antlers: false
+          display: 'First Name'
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          validate:
+            - required
+      -
+        handle: last_name
+        field:
+          placeholder: 'Enter last name'
+          input_type: text
+          antlers: false
+          display: 'Last Name'
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          validate:
+            - required
+      -
+        handle: email
+        field:
+          placeholder: 'Enter email'
+          input_type: email
+          antlers: false
+          display: Email
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          validate:
+            - required
+      -
+        handle: job_title
+        field:
+          placeholder: 'Enter job title'
+          input_type: text
+          antlers: false
+          display: 'Job Title'
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          validate:
+            - required
+      -
+        handle: company
+        field:
+          placeholder: 'Enter Company'
+          input_type: text
+          antlers: false
+          display: Company
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          validate:
+            - required
+      -
+        handle: mobile_number
+        field:
+          placeholder: 'Enter Mobile number'
+          input_type: number
+          antlers: false
+          display: 'Mobile number'
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          validate:
+            - required
+      -
+        handle: city
+        field:
+          placeholder: 'Enter City'
+          input_type: text
+          antlers: false
+          display: City
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          validate:
+            - required
+      -
+        handle: street_address
+        field:
+          placeholder: 'Enter Street Address'
+          input_type: text
+          antlers: false
+          display: 'Street Address'
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: zip_code
+        field:
+          placeholder: 'Enter Zip Code'
+          input_type: text
+          antlers: false
+          display: 'Zip Code'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: state
+        field:
+          placeholder: 'Enter State'
+          input_type: text
+          antlers: false
+          display: State
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          validate:
+            - required
+      -
+        handle: country
+        field:
+          placeholder: 'Enter Country'
+          input_type: text
+          antlers: false
+          display: Country
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: linkedin
+        field:
+          placeholder: 'Enter LinkedIn Profile URL'
+          input_type: text
+          antlers: false
+          display: Linkedin
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: consent
+        field:
+          inline: true
+          options:
+            consent: 'The data you provide will be used to register you for the event. By completing the registration form, you accept ISMG’s Terms & Conditions and Data Collection Consent.'
+          display: Consent
+          type: checkboxes
+          icon: checkboxes
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false

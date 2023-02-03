@@ -1,0 +1,1517 @@
+title: Awards
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+          instructions: 'Title is not shown anywhere.'
+          instructions_position: above
+          listable: hidden
+          visibility: visible
+          always_save: false
+          input_type: text
+          antlers: false
+          display: Title
+      -
+        handle: date_of_event
+        field:
+          placeholder: 'Enter Event Date'
+          input_type: text
+          antlers: false
+          display: 'Event Date'
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          instructions: 'Enter Date only in this format : Ex: March 10, January 20, Mar 10, Jan 20 etc..'
+      -
+        handle: event_year
+        field:
+          placeholder: 'Enter year'
+          input_type: text
+          antlers: false
+          display: 'Event Year'
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          instructions: 'Enter Year : Ex 2023 etc..'
+      -
+        handle: hero_video
+        field:
+          mode: list
+          container: assets
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: 'Hero Video'
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          instructions: 'This video will show up under the navigation on awards main page. (Make sure video size is less than or equal to 20mb )'
+      -
+        handle: hero_title_first_line
+        field:
+          input_type: text
+          antlers: false
+          display: 'Hero Title First Line'
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          instructions: 'This Title first line shows under the video.'
+      -
+        handle: hero_title_second_line
+        field:
+          input_type: text
+          antlers: false
+          display: 'Hero Title Second Line'
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          instructions: 'This Title second line shows under the firstline.'
+      -
+        handle: animation_text_1
+        field:
+          input_type: text
+          antlers: false
+          display: 'Animation Text 1'
+          type: text
+          icon: text
+          width: 33
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          instructions: 'Enter First Word for Animating text'
+      -
+        handle: animation_text_2
+        field:
+          input_type: text
+          antlers: false
+          display: 'Animation Text 2'
+          type: text
+          icon: text
+          width: 33
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          instructions: 'Enter Second Word for Animating text'
+      -
+        handle: animation_text_3
+        field:
+          input_type: text
+          antlers: false
+          display: 'Animation Text 3'
+          type: text
+          icon: text
+          width: 33
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          instructions: 'Enter Third Word for Animating text'
+      -
+        handle: overview_text_paragraph_1
+        field:
+          antlers: false
+          display: 'Overview Text Paragraph 1'
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          instructions: 'Enter Overview Text paragraph 1'
+      -
+        handle: overview_text_paragraph_2
+        field:
+          antlers: false
+          display: 'Overview Text Paragraph 2'
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          instructions: 'Enter Overview Text paragraph 2'
+      -
+        handle: overview_text_paragraph_3
+        field:
+          antlers: false
+          display: 'Overview Text Paragraph 3'
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          instructions: 'Enter Overview Text paragraph 3'
+      -
+        handle: cta_panel
+        field:
+          collapse: true
+          previews: true
+          max_sets: 3
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: cta_image
+                  field:
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    display: 'CTA Image'
+                    type: assets
+                    icon: assets
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: cta_text
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'CTA Text'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: cta_link
+                  field:
+                    display: 'CTA Link'
+                    type: link
+                    icon: link
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+          display: 'CTA panel'
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          instructions: 'This Panel hold the cta links shown right to the overview text.'
+      -
+        handle: panels
+        field:
+          collapse: true
+          previews: true
+          max_sets: 3
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: panel_teaser
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Panel Teaser'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                    instructions: 'Add panel Teaser'
+                -
+                  handle: panel_title
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Panel Title'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                    instructions: 'Add title for panel'
+                -
+                  handle: panel_text_paragraph_1
+                  field:
+                    antlers: false
+                    display: 'Panel Text Paragraph 1'
+                    type: textarea
+                    icon: textarea
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                    instructions: 'Add Panel Text para 1'
+                -
+                  handle: panel_text_paragraph_2
+                  field:
+                    antlers: false
+                    display: 'Panel Text Paragraph 2'
+                    type: textarea
+                    icon: textarea
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                    instructions: 'Leave this option if you have list at position 2 paragraph'
+                -
+                  handle: panel_text_paragraph_3
+                  field:
+                    antlers: false
+                    display: 'Panel Text Paragraph 3'
+                    type: textarea
+                    icon: textarea
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: listable_content
+                  field:
+                    collapse: false
+                    previews: true
+                    max_sets: 10
+                    sets:
+                      new_set:
+                        display: 'New Set'
+                        fields:
+                          -
+                            handle: list_item
+                            field:
+                              input_type: text
+                              antlers: false
+                              display: 'List item'
+                              type: text
+                              icon: text
+                              listable: hidden
+                              instructions_position: above
+                              visibility: visible
+                              always_save: false
+                    display: 'Listable Content'
+                    type: replicator
+                    icon: replicator
+                    instructions: 'Enter the content that goes in li tags'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: panel_image
+                  field:
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    display: 'Panel Image'
+                    type: assets
+                    icon: assets
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                    instructions: 'Image you upload here will be added to Right or Left to the panel based on the panel count'
+                -
+                  handle: event_location
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Where
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                    instructions: 'Only works for first panel visible on the page'
+                -
+                  handle: event_when
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: When
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                    instructions: 'Only works for first panel visible on the page'
+          display: Panels
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          instructions: 'These are criss cross panels under the Overview section. (Where and when options only works on first panel)'
+      -
+        handle: agenda_teaser
+        field:
+          input_type: text
+          antlers: false
+          display: 'Agenda Teaser'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          instructions: 'Add Agenda Teaser'
+      -
+        handle: agenda_title
+        field:
+          input_type: text
+          antlers: false
+          display: 'Agenda Title'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          instructions: 'Add Agenda Title'
+      -
+        handle: agenda_description
+        field:
+          input_type: text
+          antlers: false
+          display: 'Agenda Description'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          instructions: 'Add Agenda Description'
+      -
+        handle: day_1_agenda_data
+        field:
+          collapse: true
+          previews: true
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: time
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Time
+                    type: text
+                    icon: text
+                    instructions: 'Ex : 8:30 AM - 9:30 AM'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: label
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Label
+                    type: text
+                    icon: text
+                    instructions: 'accordion name'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: content
+                  field:
+                    antlers: false
+                    display: Content
+                    type: textarea
+                    icon: textarea
+                    instructions: 'content you enter here will be appear inside of accordion'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+          display: 'Day 1 Agenda Data'
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          instructions: 'You can enter the data that you needed on Day 1 (option or Tab).'
+      -
+        handle: agenda_day_2_data
+        field:
+          collapse: false
+          previews: true
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: time_day2
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Time
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: label_day2
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Label
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                    instructions: 'accordion name'
+                -
+                  handle: content_day2
+                  field:
+                    antlers: false
+                    display: Content
+                    type: textarea
+                    icon: textarea
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                    instructions: 'content you enter here will be appear inside of accordion'
+          display: 'Day 2 Agenda Data'
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          instructions: 'You can enter the data that you needed on Day 2 (option or Tab).'
+      -
+        handle: upload_download_agenda_file
+        field:
+          mode: list
+          container: assets
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: 'Upload Download Agenda File'
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: show_download_agenda
+        field:
+          default: false
+          display: 'Show Download Agenda Cta'
+          type: toggle
+          icon: toggle
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: speakers_agenda_section_first_column
+        field:
+          collapse: true
+          previews: true
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: agenda_speaker_image
+                  field:
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    max_files: 1
+                    display: 'Agenda Speaker Image'
+                    type: assets
+                    icon: assets
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: agenda_speaker_name
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Agenda Speaker Name'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: agenda_speaker_designation
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Agenda Speaker Designation'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: agenda_speaker_company_name
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Agenda Speaker Company Name'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+          display: 'Speakers Advisory Section First Column'
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: speakers_agenda_section_second_column
+        field:
+          collapse: true
+          previews: true
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: agenda_speaker_image_col_2
+                  field:
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    display: 'Agenda Speaker Image'
+                    type: assets
+                    icon: assets
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: agenda_speaker_name_col_2
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Agenda Speaker Name'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: agenda_speaker_designation_col_2
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Agenda Speaker Designation'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: agenda_speaker_company_name_col_2
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Agenda Speaker Company Name'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+          display: 'Speakers Advisory Section Second Column'
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: speakers_agenda_section_third_column
+        field:
+          collapse: true
+          previews: true
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: agenda_speaker_image_col_3
+                  field:
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    max_files: 1
+                    display: 'Agenda Speaker Image'
+                    type: assets
+                    icon: assets
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: agenda_speaker_name_col_3
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Agenda Speaker Name'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: agenda_speaker_designation_col_3
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Agenda Speaker Designation'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: agenda_speaker_company_name_col_3
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Agenda Speaker Company Name'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+          display: 'Speakers Advisory Section Third Column'
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: speakers_advisory_section_fourth_column
+        field:
+          collapse: true
+          previews: true
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: agenda_speaker_image_col_4
+                  field:
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    max_files: 1
+                    display: 'Agenda Speaker Image'
+                    type: assets
+                    icon: assets
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: agenda_speaker_name_col_4
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Agenda Speaker Name'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: agenda_speaker_designation_col_4
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Agenda Speaker Designation'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: agenda_speaker_company_name_col_4
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Agenda Speaker Company Name'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+          display: 'Speakers Advisory Section Fourth Column'
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: speakers_jury_section_first_column
+        field:
+          collapse: true
+          previews: true
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: jury_speaker_image
+                  field:
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    display: 'Jury Speaker image'
+                    type: assets
+                    icon: assets
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: jury_speaker_name
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Jury Speaker Name'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: jury_speaker_designation
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Jury Speaker Designation'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: jury_speaker_company_name
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Jury Speaker Company name'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+          display: 'Speakers Jury Section First Column'
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: speakers_jury_section_second_column
+        field:
+          collapse: true
+          previews: true
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: jury_speaker_image_col_2
+                  field:
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    max_files: 1
+                    display: 'Jury Speaker image'
+                    type: assets
+                    icon: assets
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: jury_speaker_name
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Jury Speaker Name'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: jury_speaker_designation_col_2
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Jury Speaker Designation'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: jury_speaker_company_name_col_2
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Jury Speaker Company Name'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+          display: 'Speakers Jury Section Second Column'
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: speakers_jury_section_third_column
+        field:
+          collapse: true
+          previews: true
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: jury_speaker_image_col_3
+                  field:
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    max_files: 1
+                    display: 'Jury Speaker image'
+                    type: assets
+                    icon: assets
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: jury_speaker_name_col_3
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Jury Speaker Name'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: jury_speaker_designation_col_3
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Jury Speaker Designation'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: jury_speaker_company_name_col_3
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Jury Speaker Company Name'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+          display: 'Speakers Jury Section Third Column'
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: speakers_jury_section_fourth_column
+        field:
+          collapse: true
+          previews: true
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: jury_speaker_image_col_4
+                  field:
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    max_files: 1
+                    display: 'Jury Speaker image'
+                    type: assets
+                    icon: assets
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: jury_speaker_name_col_4
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Jury Speaker Name'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: jury_speaker_designation_col_4
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Jury Speaker Designation'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: jury_speaker_company_name_col_4
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Jury Speaker Company Name'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+          display: 'Speakers Jury Section Fourth Column'
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: speakers_section_first_column
+        field:
+          collapse: true
+          previews: true
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: speaker_image
+                  field:
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    max_files: 1
+                    display: 'Speaker Image'
+                    type: assets
+                    icon: assets
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: speaker_name
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Speaker Name'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: speaker_designation
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Speaker Designation'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: speaker_company_name
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Speaker Company Name'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+          display: 'Speakers Section First Column'
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: speakers_section_second_column
+        field:
+          collapse: true
+          previews: true
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: speaker_image_col_2
+                  field:
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    max_files: 1
+                    display: 'Speaker Image'
+                    type: assets
+                    icon: assets
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: speaker_name_col_2
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Speaker Name'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: speaker_designation_col_2
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Speaker Designation'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: speaker_company_name_col_2
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Speaker Company Name'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+          display: 'Speakers Section Second Column'
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: speakers_section_third_column
+        field:
+          collapse: true
+          previews: true
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: speaker_image_col_3
+                  field:
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    max_files: 1
+                    display: 'Speaker Image'
+                    type: assets
+                    icon: assets
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: speaker_name_col_3
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Speaker Name'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: speaker_designation_col_3
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Speaker Designation'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: speaker_company_name_col_3
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Speaker Company Name'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+          display: 'Speakers Section Third Column'
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: speakers_section_fourth_column
+        field:
+          collapse: true
+          previews: true
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: speaker_image_col_4
+                  field:
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    max_files: 1
+                    display: 'Speaker Image'
+                    type: assets
+                    icon: assets
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: speaker_name_col_4
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Speaker Name'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: speaker_designation_col_4
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Speaker Designation'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: speaker_company_name_col_4
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Speaker Company Name'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+          display: 'Speakers Section Fourth Column'
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: sponsors
+        field:
+          collapse: true
+          previews: true
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: sponsor_image
+                  field:
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    max_files: 1
+                    display: 'Sponsor Image'
+                    type: assets
+                    icon: assets
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: sponsor_type_text
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Sponsor type text'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+          display: Sponsors
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: become_a_sponsor_link
+        field:
+          display: 'Become a sponsor Link'
+          type: link
+          icon: link
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: testimonials
+        field:
+          collapse: true
+          previews: true
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: reviewer_avatar
+                  field:
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    max_files: 1
+                    display: 'Reviewer Avatar'
+                    type: assets
+                    icon: assets
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: name
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: Name
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: designation
+                  field:
+                    antlers: false
+                    display: Designation
+                    type: textarea
+                    icon: textarea
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: review
+                  field:
+                    antlers: false
+                    display: Review
+                    type: textarea
+                    icon: textarea
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+          display: Testimonials
+          type: replicator
+          icon: replicator
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: template
+        field:
+          hide_partials: true
+          blueprint: false
+          display: 'Template Field'
+          type: template
+          icon: template
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - pages
+          max_items: 1
+          listable: false
+          localizable: true

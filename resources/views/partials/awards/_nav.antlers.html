@@ -1,0 +1,166 @@
+<!-- Nav & Hero section  -->
+<div class="relative">
+    <!-- header start  -->
+    <header class="bg-white text-black w-full z-50">
+        <nav class="container flex flex-wrap items-center py-2">
+            <div class="flex-1 flex justify-between items-center">
+                <a href="{{url}}" class="text-xl">
+                    {{#
+                    <img
+                        class="hidden md:block w-[100px] md:w-[250px]"
+                        height="100%"
+                        src="/assets/awards/images/logo.png"
+                        alt=""
+                    />
+                    #}}
+                    <img
+                        class="block w-[100px] md:w-[200px] md:h-[80px]"
+                        height="100%"
+                        src="/assets/awards/images/logo-final_black.png"
+                        alt=""
+                    />
+                </a>
+            </div>
+
+            <label for="menu-toggle" class="pointer-cursor md:hidden block">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                >
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path d="M3 4h18v2H3V4zm6 7h12v2H9v-2zm-6 7h18v2H3v-2z" />
+                </svg>
+            </label>
+            <input class="hidden" type="checkbox" id="menu-toggle" />
+
+            <div
+                class="hidden md:flex md:items-center md:w-auto w-full transition ease-in-out delay-150"
+                id="menu"
+            >
+                <ul
+                    class="md:flex items-center justify-between text-base text-black md:text-black pt-4 md:pt-0"
+                >
+                    <li>
+                        <a
+                            class="md:p-4 py-3 px-0 block cursor-pointer hover:text-[#F5A700]"
+                            href="#agenda"
+                            >Agenda</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            class="md:p-4 py-3 px-0 block cursor-pointer hover:text-[#F5A700]"
+                            href="#agenda"
+                            >Speakers</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            class="md:p-4 py-3 px-0 block cursor-pointer hover:text-[#F5A700]"
+                            href="#sponsors"
+                            >Sponsors</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            class="md:p-4 py-3 px-0 block cursor-pointer hover:text-[#F5A700]"
+                            href="#contact"
+                            >Contact</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- header end  -->
+    <!-- floating buttons start -->
+    <a
+        href="/awards/nomination"
+        target="_blank"
+        class="hidden xl:flex absolute px-6 py-2 -rotate-90 z-50 top-[25%] -right-11 border border-white drop-shadow-xl justify-center items-center text-white text-xl hover:bg-[#F5A800] hover:drop-shadow-2xl"
+    >
+        Nominate
+    </a>
+    <a
+        href="/awards/registration"
+        target="_blank"
+        class="hidden xl:flex absolute px-6 py-2 -rotate-90 z-50 top-[43%] -right-9 border border-white drop-shadow-lg justify-center items-center text-white text-xl hover:bg-blue-800 hover:drop-shadow-2xl"
+    >
+        Register
+    </a>
+
+    <!-- floating buttons end -->
+    <!-- video code start  -->
+
+    <div class="hero_video relative">
+        {{#
+        <div
+            class="video before:absolute before:!h-full before:w-[100%] before:bg-black before:bg-opacity-30"
+        ></div>
+        #}}
+        <video
+            src="{{hero_video}}"
+            muted
+            class="z-0 w-[100%]"
+            autoplay
+            loop
+        ></video>
+
+        <div class="container">
+            <!-- floating text start  -->
+
+            {{#
+            <div class="hero_text absolute top-16 sm:top-48 xl:top-[68%] !z-10">
+                <div
+                    class="text-white text-lg sm:text-3xl xl:text-6xl leading-[3rem] caption"
+                >
+                    {{hero_title_first_line}}
+                </div>
+                <div
+                    class="text-white text-lg sm:text-3xl xl:text-6xl leading-[3rem] caption mt-[-1.0rem] sm:mt-4 lg:mt-6"
+                >
+                    <span class="!mt-2"> {{hero_title_second_line}}</span>
+                    <div
+                        class="text-box leading-normal top-[10px] md:top-0 -z-50"
+                    >
+                        <div class="text-[#F5A800] -z-0">
+                            {{animation_text_1}}
+                        </div>
+                        <div class="text-[#F5A800] -z-0">
+                            {{animation_text_2}}
+                        </div>
+                        <div class="text-[#F5A800] -z-0">
+                            {{animation_text_3}}
+                        </div>
+                    </div>
+                </div>
+                #}} {{#
+                <!-- floating buttons start -->
+                <div class="flex gap-5 mt-0 md:mt-10 text-center">
+                    <a
+                        href="/awards/registration"
+                        class="bg-[#0B0D4E] px-6 py-2 border border-white drop-shadow-xl text-white text-xl hover:bg-[#F5A800] hover:drop-shadow-2xl"
+                    >
+                        Register
+                    </a>
+                    <a
+                        href="#"
+                        class="px-6 py-2 border border-white drop-shadow-xl text-white text-xl hover:bg-[#F5A800] hover:drop-shadow-2xl"
+                    >
+                        Nominate
+                    </a>
+                </div>
+
+                <!-- floating buttons end -->
+                #}}
+            </div>
+
+            <!-- floating text end  -->
+        </div>
+    </div>
+
+    <!-- video code end  -->
+</div>
+<!-- Nav & Hero section  -->

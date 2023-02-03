@@ -1,0 +1,108 @@
+<!-- Nav & Hero section  -->
+<div class="relative">
+    <!-- header start  -->
+    <header class="bg-white text-black w-full z-50 hidden">
+        <nav class="container flex flex-wrap items-center py-2">
+            <div class="flex-1 flex justify-between items-center">
+                <a href="{{url}}" class="text-xl">
+                    {{#
+                    <img
+                        class="hidden md:block w-[100px] md:w-[250px]"
+                        height="100%"
+                        src="/assets/microsoft-gallery/images/logo.png"
+                        alt=""
+                    />
+                    #}}
+                    <img
+                        class="block w-[100px] md:w-[200px] h-auto"
+                        height="100%"
+                        src="/assets/microsoft-gallery/images/microsoft-logo-cropped.png"
+                        alt=""
+                    />
+                </a>
+            </div>
+
+            <label for="menu-toggle" class="pointer-cursor md:hidden block">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                >
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path d="M3 4h18v2H3V4zm6 7h12v2H9v-2zm-6 7h18v2H3v-2z" />
+                </svg>
+            </label>
+            <input class="hidden" type="checkbox" id="menu-toggle" />
+
+            <div
+                class="hidden md:flex md:items-center md:w-auto w-full transition ease-in-out delay-150"
+                id="menu"
+            >
+                <ul
+                    class="md:flex items-center justify-between text-base text-black md:text-black pt-4 md:pt-0"
+                >
+                    <li>
+                        <a
+                            class="md:p-4 py-3 px-0 block cursor-pointer hover:text-[#F5A700]"
+                            href="#agenda"
+                            >Agenda</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            class="md:p-4 py-3 px-0 block cursor-pointer hover:text-[#F5A700]"
+                            href="#agenda"
+                            >Speakers</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            class="md:p-4 py-3 px-0 block cursor-pointer hover:text-[#F5A700]"
+                            href="#sponsors"
+                            >Sponsors</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            class="md:p-4 py-3 px-0 block cursor-pointer hover:text-[#F5A700]"
+                            href="#contact"
+                            >Contact</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- header end  -->
+    <div class="banner_image relative">
+        <img class="w-full h-auto" src="{{banner_image}}" alt="" />
+
+        <div class="container">
+            <!-- floating text start  -->
+
+            {{#
+            <!-- floating buttons start -->
+            <div class="flex gap-5 mt-0 md:mt-10 text-center">
+                <a
+                    href="#"
+                    class="bg-[#0B0D4E] px-6 py-2 border border-white drop-shadow-xl text-white text-xl hover:bg-[#F5A800] hover:drop-shadow-2xl"
+                >
+                    Register
+                </a>
+                <a
+                    href="#"
+                    class="px-6 py-2 border border-white drop-shadow-xl text-white text-xl hover:bg-[#F5A800] hover:drop-shadow-2xl"
+                >
+                    Nominate
+                </a>
+            </div>
+
+            <!-- floating buttons end -->
+            #}}
+
+            <!-- floating text end  -->
+        </div>
+    </div>
+</div>
+<!-- Nav & Hero section  -->

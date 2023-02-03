@@ -1,0 +1,317 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+          display: Title
+          instructions: 'Title is not shown anywhere.'
+          instructions_position: above
+          listable: hidden
+          visibility: visible
+          always_save: false
+          input_type: text
+          antlers: false
+      -
+        handle: template
+        field:
+          hide_partials: true
+          blueprint: false
+          display: Template
+          type: template
+          icon: template
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: banner_image
+        field:
+          mode: list
+          container: assets
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          display: 'Banner Image'
+          type: assets
+          icon: assets
+          instructions: 'This image will show up under the navigation on Microsoft event main page.'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          max_files: 1
+      -
+        handle: hero_title
+        field:
+          input_type: text
+          antlers: false
+          display: 'Hero Title'
+          type: text
+          icon: text
+          instructions: 'This Title line shows under the image.'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: overview_text_paragraph_1
+        field:
+          input_type: text
+          antlers: false
+          display: 'Overview Text Paragraph 1'
+          type: text
+          icon: text
+          instructions: 'Enter Overview Text paragraph 1'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: overview_text_paragraph_2
+        field:
+          input_type: text
+          antlers: false
+          display: 'Overview Text Paragraph 2'
+          type: text
+          icon: text
+          instructions: 'Enter Overview Text paragraph 2'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: overview_text_paragraph_3_custom
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          antlers: false
+          display: 'Overview Text Paragraph 3 Custom'
+          type: markdown
+          icon: markdown
+          instructions: 'Overview Text Paragraph 3 Customize (eg. Bold, Italics)'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: overview_text_paragraph_4_custom
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          antlers: false
+          display: 'Overview Text Paragraph 4 Custom'
+          type: markdown
+          icon: markdown
+          instructions: 'Overview Text Paragraph 4 Customize (eg. Bold, Italics)'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: masterclass_bullet_points
+        field:
+          collapse: false
+          previews: true
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: masterclass_list_points
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Masterclass List Points'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+          display: 'Masterclass bullet points'
+          type: replicator
+          icon: replicator
+          instructions: 'Multiple list will go here'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: registration_link
+        field:
+          display: 'Registration Link'
+          type: link
+          icon: link
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: event_venue
+        field:
+          collapse: false
+          previews: true
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: venue_image
+                  field:
+                    mode: list
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    show_filename: true
+                    display: 'Venue Image'
+                    type: assets
+                    icon: assets
+                    instructions: 'Image of the venue location'
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                    max_files: 1
+                -
+                  handle: event_date
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Event Date'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: venue_location_address
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Venue Location Address'
+                    type: text
+                    icon: text
+                    instructions: "Address of the event's venue"
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+                -
+                  handle: venue_city
+                  field:
+                    input_type: text
+                    antlers: false
+                    display: 'Venue City'
+                    type: text
+                    icon: text
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    always_save: false
+          display: 'Event venue'
+          type: replicator
+          icon: replicator
+          instructions: 'Add multiple venue location'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: speaker_title
+        field:
+          input_type: text
+          antlers: false
+          display: 'Speaker Title'
+          type: text
+          icon: text
+          instructions: 'Add title for speaker section'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: speaker_headshot_image
+        field:
+          mode: list
+          container: assets
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          display: 'Speaker Headshot image'
+          type: assets
+          icon: assets
+          instructions: 'Headshot image of the speaker'
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          max_files: 1
+      -
+        handle: speaker_name
+        field:
+          input_type: text
+          antlers: false
+          display: 'Speaker Name'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: speaker_designation
+        field:
+          input_type: text
+          antlers: false
+          display: 'Speaker Designation'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: speaker_company
+        field:
+          input_type: text
+          antlers: false
+          display: 'Speaker Company'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: speaker_description
+        field:
+          antlers: false
+          display: 'Speaker Description'
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+title: 'Microsoft - MES'

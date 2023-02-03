@@ -1,0 +1,118 @@
+<footer class="mt-20 bg-black text-white p-5 px-0 overflow-hidden" id="contact">
+    <div class="container">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="left_footer_area">
+                <div
+                    class="footer_img_wrapper flex flex-col md:flex-row gap-6 pt-6 pb-16"
+                >
+                    <img
+                        width="200px"
+                        src="/assets/awards/images/logo.png"
+                        alt=""
+                    />
+                    <img
+                        width="180px"
+                        src="/assets/awards/images/ismg-white-hd-logo.png"
+                        alt=""
+                    />
+                </div>
+
+                <div class="newsletter_area">
+                    {{form:newsletter}}
+                    <div class="form_group flex flex-col md:flex-row">
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Enter email"
+                            required
+                        />
+                        <button
+                            class="bg-transparent text-white border border-white uppercase px-16 py-3 md:py-0 cursor-pointer hover:bg-white hover:text-black mt-5 md:mt-0"
+                        >
+                            Subscribe
+                        </button>
+                    </div>
+                    {{/form:newsletter}}
+                </div>
+                <div class="social_networks mt-16 mb-10">
+                    <div class="flex gap-6">
+                        <div class="text">
+                            <p>Follow Us</p>
+                        </div>
+                        <div class="icons">
+                            <div class="flex items-center justify-start gap-4">
+                                <div>
+                                    <a href="#" class="cursor-pointer">
+                                        <img
+                                            src="/assets/awards/images/twitter_icon.png"
+                                            alt=""
+                                        />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#" class="cursor-pointer">
+                                        <img
+                                            src="/assets/awards/images/linkedin_icon.png"
+                                            alt=""
+                                        />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{#
+            <div class="right_footer_area relative">
+                <div class="title">
+                    <p
+                        class="relative md:absolute left-0 top-[45%] -rotate-0 md:-rotate-90 text-3xl uppercase"
+                    >
+                        Past Events
+                    </p>
+                </div>
+                <!-- past events slider start -->
+                <div class="past_events ml-0 md:ml-40 pt-8">
+                    <div class="event_slide">
+                        <img
+                            src="/assets/awards/images/pastevents.png"
+                            alt=""
+                        />
+                    </div>
+                    <div class="event_slide">
+                        <img
+                            src="/assets/awards/images/pastevents.png"
+                            alt=""
+                        />
+                    </div>
+                    <div class="event_slide">
+                        <img
+                            src="/assets/awards/images/pastevents.png"
+                            alt=""
+                        />
+                    </div>
+
+                    <!-- past events slider end -->
+                </div>
+            </div>
+            #}}
+            <div class="right_footer_area relative mt-6">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.5131711021086!2d72.86071369999999!3d19.1727759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7a8545ce553%3A0xdab2a72a6041be58!2sThe%20Westin%20Mumbai%20Garden%20City!5e0!3m2!1sen!2sin!4v1675337606317!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+            </div>
+        </div>
+
+        <!-- copyright section  -->
+        <p class="text-center text-xs text-gray-400 mt-6">
+            © 2023 Information Security Media Group, Corp. | About | Privacy &
+            GDPR Statement
+        </p>
+    </div>
+</footer>
